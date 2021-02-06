@@ -1,0 +1,21 @@
+palabra=input_string()
+entero=input_int()
+print palabra
+print entero
+
+a=4.0
+b=35
+c=a*b
+d=b/a  #d va a ser del tipo de a y/o b
+e=b//a
+f=b**a  #potenciacion b elevado a la a
+g=b%a #resto
+
+print c
+print d
+print e
+print f
+print g
+
+
+turn_off()
