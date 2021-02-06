@@ -1,0 +1,30 @@
+def funcion():
+    import random
+    a=random.randrange(2)#la es variable local de la función, no puedo usarla fuera de ella
+    print a
+    return a   #retorna el valor de a al salir de la función
+
+def turn_back():
+    repeat(turn_left,2)
+
+def jump():
+    turn_left()
+    move()
+    repeat(turn_left,3)
+    move()
+    repeat(turn_left,3)
+    move()
+#Cuando el robot encuentra un muro pregunta por el estado de la puerta
+# si el estado es 1 salta el muro, si es 0 da media vuelta    
+
+while front_is_clear():
+    move()
+estado = funcion()  #es equivalente a hacer estado=a, después que se haya ejecutado funcion
+print estado
+if a == 1:
+     jump()
+else:
+    turn_back()
+    while front_is_clear():
+        move()            
+turn_off() 
