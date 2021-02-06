@@ -1,6 +1,6 @@
 def funcion():
     import random
-    a=random.randrange(2)#la es variable local de la función, no puedo usarla fuera de ella
+    a=random.randrange(2)# a es variable local de la función, no puedo usarla fuera de ella
     print a
     return a   #retorna el valor de a al salir de la función
 
