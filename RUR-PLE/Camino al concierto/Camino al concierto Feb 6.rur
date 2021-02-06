@@ -1,0 +1,25 @@
+﻿def turn_right():
+    repeat(turn_left,3)
+
+def turn_back():
+    repeat(turn_left,2)
+    
+cont = 0
+    
+while front_is_clear():
+    while on_beeper():
+        pick_beeper()
+        cont += 1
+    if(cont == 1):
+        turn_right()
+        cont = 0
+    elif(cont == 2):
+        turn_left()
+        cont = 0
+    elif(cont == 4):
+        turn_back()
+        cont = 0
+    cont = 0
+    move()
+
+turn_off()
