@@ -1,3 +1,4 @@
+# Custos :D
 def funcion():
     import random
     a=random.randrange(2)# a es variable local de la función, no puedo usarla fuera de ella
