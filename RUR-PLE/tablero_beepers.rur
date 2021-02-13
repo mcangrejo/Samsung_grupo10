@@ -1,0 +1,55 @@
+#realizar un codigo tal que el robot recorra una matriz
+#en el tablero y complete la lista de dos dimensiones, con
+#el numero de beepers que hay en cada posicion
+
+
+#crear una lista de dos dimensiones 3x4 con 0
+#variables x,y,beepers
+#recorrer el rectangulo:
+#   1. mover en las dos dimensiones        
+#   2. Actualizar el indice x y y de la posicion actual
+#       En cada posicion: 
+#           1. recoger beepers y contar.
+#           2. al terminar de recoger todos los beepers guardar en la posicion y,x el valor contado
+#           3. dejar los beepers nuevamente
+
+tablero=[[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
+x=0
+y=0
+beepers=0
+
+def recoger():
+    global beepers
+    while on_beeper():
+        pick_beeper()
+        beepers+=1
+    print "beepers recogidos:", beepers
+
+def dejar():
+    global beepers
+    repeat(put_beeper,beepers)
+    beepers=0
+    
+def recorrer_tablero():
+    global x,y
+    if x!=2:
+        move()
+    else:
+        turn_left()
+        move()
+        turn_left()
+        repeat(move,2)
+        repeat(turn_left,2)
+    
+
+
+for y in range(0,4):
+    for x in range(0,3):
+        print x,y
+        recoger()
+        tablero[y][x]=beepers
+        dejar()
+        recorrer_tablero()
+
+print tablero
+turn_off(
