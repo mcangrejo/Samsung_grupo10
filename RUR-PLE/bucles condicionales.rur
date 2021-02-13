@@ -1,0 +1,32 @@
+# variable que lleva el conteo de los beepers
+i=0
+#variable que lleva la posici[on
+Av=1
+
+while Av<>3:  #distinto de
+    move()
+    Av+=1
+    while on_beeper():
+        pick_beeper()
+        i+=1
+
+move()
+
+while i!=0:  #distinto de 
+    put_beeper()
+    i-=1
+move()
+turn_off()
+
+
+
+
+"""
+for Av in range(1,3):
+    move()
+    Av+=1
+    print Av
+    while on_beeper():
+        pick_beeper()
+        i+=1
+"""
