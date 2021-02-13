@@ -1,0 +1,160 @@
+####RUR-PLE ####
+#funciones incorporadas movimiento
+move()
+turn_left()
+turn_off()
+
+#sensores devuelven true o false
+front_is_clear()
+right_is_clear()
+left_is_clear()
+
+#funciones de beepers
+pick_beeper()
+put_beeper()
+on_beeper()
+carries_beeper()
+
+#funcion incoporada de repetici[on
+repeat(turn_left,3)
+
+#######Python####
+#definicion de una funcion
+def turn_right()
+    repeat(turn_left,3)
+
+#implementaciones de if
+
+#if/else
+
+if a==0:
+    a+=1
+else:       #no es obligatorio
+    a+=2
+
+#if multiples
+if a==1:
+    #instruccion
+elif a==2:
+    #instruccion
+else:
+    #instruccion
+
+#if not
+ if not on_beeper():
+     move()  
+
+
+#creacion de una variable
+a=10  #entero
+c="y"  #caracter
+b=10.0 #flotante
+
+#modificacion de una variable
+a= a*2
+
+#impresion de una variable
+print a
+
+#variable global: declaran fuera de las funciones
+#variable local: declaran dentro de una funcion
+
+def f:
+    v_loc=0   #variable local de la funcion f
+    v_loc +=1
+    v_loc2=1
+        
+#Usar una variable global en una funcion
+def g:
+    global a
+    global c
+    a =a+1
+    print c
+
+#operadores de evaluacion
+if a==0:
+if a!=0:  #tambi[en funciona con <>
+if a<10:
+if a>=10:
+
+#operadores de asignacion
+a=1
+a+=1
+
+#bucle condicionales
+for i in range(5): #no se debe definir i antes del for
+    print i         #no se debe incrementar i
+
+j=0
+while j<=5:   #se debe definir el indice j antes del while
+    print j   
+    j +=1     #se debe incrementar el indice  
+
+#ingresar informacion
+input_int()     #entero
+input_string()  #cadena de caracteres
+
+#concatenar informacion y variables
+texto ="y"
+print "hola", texto, "adios"
+print "el area es:", a*a*0.5   #concatenar el resultado de una operacion
+
+
+#operaciones matematicas especiales
+a=10//4  #division entera
+
+b=a**a  #potenciacion
+
+c=10%3  #resto
+
+#espera
+set_delay(5) #espera 5 segundos antes de realizar la siguiente instruccion
+
+#Libreria math
+import math
+b=pow(a,5)   #b es igual a la varibale a elevado a la 5ta potencia
+
+
+#ramdom
+import random
+z=random.randrange(2)
+
+#for anidados para tabla de multiplicar
+
+for i in range(1,10):
+    for j in range(1,10):
+        print i,"*",j, "=", i*j
+
+str="Samsung innovation"
+print str
+
+###python: Listas  c/c++: Arreglos###
+
+
+#los strings son listas de caracteres 
+#(arreglos de caracteres)
+#cada caracter ocupa una posicion en el string
+#las posiciones se numeran desde el indice 0
+
+#para imprimir solo uno de los carateres
+#se usa [] y dentro el indice del caracter
+print str[0] 
+print str[6]
+print str[7]
+print str[8:17]
+
+#Lista (arreglos) de numeros
+arreglo=list(range(2,50,5))
+print arreglo
+print arreglo[5:7]
+
+arreglo2=[2,4,6,5,3,1]
+print arreglo2
+
+#listas de dos dimensiones (matrices en c/c++)
+tablero=[[4,0,5],[0,2,0],[1,0,2],[4,0,3]]
+print tablero
+tablero[2][1]=5
+print tablero
+
+
