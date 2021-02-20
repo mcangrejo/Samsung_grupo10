@@ -1,0 +1,51 @@
+import random
+
+R1 = UsedRobot(1,1,name='keles',colour='blue')
+R2 = UsedRobot(1,2,name='Jay',colour='red')
+R3 = UsedRobot(1,3,name='Maria',colour='yellow')
+
+robots=[R1,R2,R3]  #lista de los tres robots creados
+
+def turn_back(num_robot):  #usar argumentos en una función
+    global robots
+    repeat(robots[num_robot].turn_left,2)
+
+gano = False
+
+while gano == False:
+    num = random.randrange(4)
+    for i in range(num):
+        if R1.front_is_clear():
+            R1.move()
+        else:
+            gano = True
+            turn_back(0)
+            break #romper "a la fuerza" el bucle que lo contiene
+    num = random.randrange(4)
+    for i in range(num):
+        if R2.front_is_clear():
+            R2.move()
+        else:
+            gano = True
+            turn_back(1)
+            break
+    num = random.randrange(4)
+    for i in range(num):
+        if R3.front_is_clear():
+            R3.move()
+        else:
+            gano = True
+            turn_back(2)
+            break
+
+if R1.on_beeper():
+    print 'Gano ', R1.name
+elif R2.on_beeper:
+    print 'Gano ', R2.name
+else:
+    print 'Gano ', R3.name
+
+
+R1.turn_off()
+R2.turn_off()
+R3.turn_off()

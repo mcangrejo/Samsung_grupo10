@@ -1,0 +1,43 @@
+import random
+
+R1 = UsedRobot(1,1,name='keles',colour='blue')
+R2 = UsedRobot(1,2,name='Jay',colour='red')
+R3 = UsedRobot(1,3,name='Maria',colour='yellow')
+
+
+gano = False
+
+while gano == False:
+    num = random.randrange(4)
+    for i in range(num):
+        if R1.front_is_clear():
+            R1.move()
+        else:
+            gano = True
+            break #romper "a la fuerza" el bucle que lo contiene
+    num = random.randrange(4)
+    for i in range(num):
+        if R2.front_is_clear():
+            R2.move()
+        else:
+            gano = True
+            break
+    num = random.randrange(4)
+    for i in range(num):
+        if R3.front_is_clear():
+            R3.move()
+        else:
+            gano = True
+            break
+
+if R1.on_beeper():
+    print 'Gano ', R1.name
+elif R2.on_beeper:
+    print 'Gano ', R2.name
+else:
+    print 'Gano ', R3.name
+
+
+R1.turn_off()
+R2.turn_off()
+R3.turn_off()

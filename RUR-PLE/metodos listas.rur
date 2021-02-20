@@ -1,0 +1,38 @@
+#funciones propias de listas
+a=[4,3,2,5,1,6]
+print "lista original",a
+
+#agrega un valor al final de la lista
+a.append(10)
+print a
+
+#inserta el valor y en la posición x, sin eliminiar x
+a.insert(2,8)
+print a
+
+#remueve el primer valor de X que aparece en la lista
+a.remove(3)
+print a
+
+#elimina el último valor de la lista
+a.pop()
+print a
+
+#retorna el número de apariciones de 8 en la lista
+a.append(8)
+print a
+print "cantidad de 8 en mi lista",a.count(8)
+
+#elimina el primer valor de la lista
+a.pop(0)
+print a
+
+#invertir la lista
+a.reverse()
+print a
+
+#ordenar la lista
+a.sort()
+print a
+
+turn_off()
